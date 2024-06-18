@@ -544,7 +544,7 @@ wofi -- launcher for wlroots-based wayland compositors
 <h2>AUR</h2>
 <p>AUR is a community software warehouse.</p>
 
-<p><strong>About<font color="Red">"*-debug" packages</font><strong> see <a href=#Makepkg_Debug>makepkg</a></p>
+<p><strong>About<font color="Red">"*-debug" packages</font></strong> see <a href=#Makepkg_Debug>makepkg</a></p>
 
 <p>Install paru</p>
 
