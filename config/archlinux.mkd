@@ -178,7 +178,9 @@ For example, if the root volume is <code>/dev/root_parttition</code>.</p>
 
 <p><strong>Install essential packages</strong></p>
 
+<!--
 <p><code>$ pacstrap -K /mnt base linux-zen linux-firmware base-devel linux-zen-headers networkmanager vim git grub efibootmgr intel-ucode man-db man-pages nvidia-dkms nvidia-settings nvidia-utils btop htop alsa-utils p7zip hyprland wayland ttf-mononoki-nerd mpv firewalld light texinfo hyprpaper waybar iptables-nft alacritty</code></p>
+-->
 
 <p><code>$ pacstrap -K /mnt base base-devel efibootmgr git grub linux-firmware linux-zen linux-zen-headers man-db man-pages networkmanager pacman-contrib texinfo vim</code></p>
 
