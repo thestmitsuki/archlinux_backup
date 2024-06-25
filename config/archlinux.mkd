@@ -442,6 +442,7 @@ wofi -- launcher for wlroots-based wayland compositors
 <p><strong>Tree</strong></p>
 
 <ul>
+<li><p><a href=#Bash_Custom_Format>Bash Custom Format</a></p>
 <li><p><a href=#Makepkg_Debug>Makepkg</a></p>
 <li><p><a href=#Mirrorsite>Mirrorsite</a></p>
 <li><p><a href=#32-bit>Multilib</a></p>
@@ -454,6 +455,19 @@ wofi -- launcher for wlroots-based wayland compositors
 <li><p><a href=#Aria2>Aria2</a></p>
 <li><p><a href=#Fontconfig>Fontconfig</a></p>
 </ul>
+
+<!-- Bash Custom Format -->
+<h2 id =Bash_Custom_Format>Bash Custom Format</h2>
+<p>Add time in bash.</p>
+<p><code>$ vim /home/<font color="Red">&lt;cuntom name&gt;</font>/.bashrc</code></p>
+
+<ul>
+<li>
+<p>file change</p>
+<p><code>+ PS1='\A [\u@\h \W]\$ '</code></p>
+</li>
+</ul>
+
 
 
 <!-- Makepkg Debug-->
