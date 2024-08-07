@@ -1,6 +1,6 @@
 <!-- $ -->
 <h1><strong>ArchLinux</strong></h1>
-<p>last updata 06/10/2024</p>
+<p>last updata 08/07/2024</p>
 
 <h2>Matters Needing Attention</h2>
 <p>In code block <code>$</code> it means terminal, and there is no need to input it.</p>
@@ -225,7 +225,7 @@ vim -- Vi Improved, a highly configurable, improved version of the vi text edito
 
 <p><strong>Cuntom install</strong></p>
 
-<p><code>$ pacstrap -K /mnt alacritty alsa-utils aria2 base base-devel bat btop efibootmgr firewalld git grub hyprland hyprpaper htop iftop intel-ucode iotop iptables-nft linux-firmware linux-zen linux-zen-headers mako man-db mpv man-pages networkmanager p7zip pacman-contrib pipewire pipewire-alsa pipewire-pulse pwgen termshark texinfo trash-cli tree ttf-mononoki-nerd vim waybar wayland wireshark-cil wireshark-qt wl-clipboard wofi</code></p>
+<p><code>$ pacstrap -K /mnt alacritty alsa-utils aria2 base base-devel bat btop easyeffects efibootmgr firewalld git grub hyprland hyprpaper htop iftop intel-ucode iotop iptables-nft linux-firmware linux-zen linux-zen-headers mako man-db mpv man-pages networkmanager p7zip pacman-contrib pipewire pipewire-alsa pipewire-pulse pwgen termshark texinfo trash-cli tree ttf-mononoki-nerd vim waybar wayland wireshark-cil wireshark-qt wl-clipboard wofi</code></p>
 
 <pre lang="text"><code>
 alacritty -- A cross-platform, OpenGL terminal emulator
@@ -464,7 +464,7 @@ wofi -- launcher for wlroots-based wayland compositors
 <ul>
 <li>
 <p>file change</p>
-<p><code>+ PS1='\A [\u@\h \W]\$ '</code></p>
+<p><code>+ PS1='[\A \u@\h \W]\$ '</code></p>
 </li>
 </ul>
 
@@ -504,13 +504,14 @@ wofi -- launcher for wlroots-based wayland compositors
 
 <!-- Pacman Custom -->
 <h2 id=Pacman_Custom>Pacman Custom</h2>
-<p>Pacman output with color</p>
+<p>Pacman output with color, and comparing versions before updating.</p>
 <p><code>$ vim /etc/pacman.conf</code></p>
 
 <ul>
 <li>
 <p>file change</p>
 <p><code>* #color</code>&emsp;-->&emsp;<code>color</code></p>
+<p><code>* #VerbosePkgLists</code>&emsp;-->&emsp;<code>VerbosePkgLists</code></p>
 </li>
 </ul>
 
@@ -617,7 +618,7 @@ v2raya -- A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Tr
 <p><code>* $terminal = kitty</code>&emsp;-->&emsp;<code>$terminal = alacritty</code></p>
 <p><code>* $fileManager = dolphin</code>&emsp;-->&emsp;<code>$fileManager = alacritty -e joshuto</code></p>
 <p><code>* $menu = wofi --show drun</code>&emsp;-->&emsp;<code>$menu = wofi --show run --style /home/<font color="Red">&lt;cuntom name&gt;</font>/.config/wofi/wofi.css --conf /home/<font color="Red">&lt;cuntom name&gt;</font>/.config/wofi/wofi.config --line 8</code></p>
-<p><code>+ bind = $mainMod, F, fullscreen, 0</code></p>
+<p><code>+ bind = $mainMod, F, fullscreen, 2</code></p>
 </li>
 </ul>
 
