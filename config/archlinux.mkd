@@ -1,6 +1,6 @@
 <!-- $ -->
 <h1><strong>ArchLinux</strong></h1>
-<p>last updata 08/07/2024</p>
+<p>last updata 08/21/2024</p>
 
 <h2>Matters Needing Attention</h2>
 <p>In code block <code>$</code> it means terminal, and there is no need to input it.</p>
@@ -834,7 +834,7 @@ watch-later-directory=/home/<font color="Red">&lt;cuntom name&gt;</font>/.config
 <!-- $ -->
     "modules-center": ["hyprland/window"],
 <!-- $ -->
-    "modules-right": ["clock", "privacy"],
+    "modules-right": ["network", "pulseaudio", "clock", "privacy"],
 <!-- $ -->  
     "hyprland/window": {
         "max-length": 50,
@@ -867,6 +867,37 @@ watch-later-directory=/home/<font color="Red">&lt;cuntom name&gt;</font>/.config
 		}
 	]
 	},
+<!-- $ -->  
+    "network": {
+    "format": "{ifname}",
+    "format-ethernet": "CONNECT  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-disconnected": "DISCONNECT", //An empty format will hide the module.
+    "max-length": 50,	
+	"tooltip": false,
+	"interval": 1,
+	},
+<!-- $ -->  
+	"pulseaudio": {
+        "scroll-step": 1, // %, can be a float
+		"tooltip": true,
+		"tooltip-format": "{desc}",
+		"max-volume": 120,
+        "format": "{icon} {volume}% / {format_source}",
+        "format-bluetooth": "BLUETOOTH {icon} {volume}% / {format_source}",
+        "format-bluetooth-muted": "BLUETOOTH {icon} MUTE / {format_source}",
+        "format-muted": "OUTPUT MUTE / {format_source}",
+        "format-source": "INPUT {volume}%",
+        "format-source-muted": "INPUT MUTE",
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "default": ["LOW", "MEDIUM", "HIGH"]
+        },
+        "on-click": "easyeffects",
+		"on-click-middle": "amixer sset Master mute",
+		"on-click-right": "amixer sset Master unmute",
+        "ignored-sinks": ["Easy Effects Sink"], // when not use this line, the volume adjustment fuction will disabled after "Easy Effects" enables all players.
+    },
 }
 <!-- $ -->   
 </pre></code></p>
@@ -887,6 +918,10 @@ watch-later-directory=/home/<font color="Red">&lt;cuntom name&gt;</font>/.config
     min-height: 0;
 }
 <!-- $ -->
+#window {
+    border-bottom: 3px solid transparent;
+}
+<!-- $ -->
 window#waybar {
     background: rgba(43, 48, 59, 0.5);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
@@ -894,23 +929,30 @@ window#waybar {
 }
 <!-- $ -->
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px 5px;
     background: transparent;
     color: white;
-    border-bottom: 3px solid transparent;
-}
-<!-- $ -->
-#window {
     border-bottom: 3px solid transparent;
 }
 <!-- $ -->
 #clock {
     color: #ffffff;
     border-bottom: 3px solid transparent;
+
 }
 <!-- $ -->
 #privacy{
-    padding: 0 5px;
+    padding: 0px 5px;
+    border-bottom: 3px solid transparent;
+}
+<!-- $ -->
+#network{
+    padding: 0px 0px;
+    border-bottom: 3px solid transparent;
+}
+<!-- $ -->
+#pulseaudio{
+    padding: 0px 20px;
     border-bottom: 3px solid transparent;
 }
 <!-- $ -->
@@ -1004,6 +1046,8 @@ window{
 
 <!-- Sound configuration -->
 <p><strong>Sound configuration</strong></p>
+
+<p>Run GUI sound manager.</p>
 
 <p><code>$ alsamixer</code></p>
 
