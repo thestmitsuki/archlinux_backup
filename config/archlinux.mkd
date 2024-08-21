@@ -938,7 +938,6 @@ window#waybar {
 #clock {
     color: #ffffff;
     border-bottom: 3px solid transparent;
-
 }
 <!-- $ -->
 #privacy{
